@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controlar inventario</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Inventario</h1>
+      <p class="sub">Inventario cool</p>
+    </div>
+
+    <div class="content">
+      <div class="left">
+        <h2>Agregar o modificar</h2>
+        <div class="content-info">
+          <form>
+            <div class="field">
+              <label>ID de producto:</label>
+              <input id="id" type="number"/>
+            </div>
+            <div class="field">
+              <label>Producto:</label>
+              <input id="name" type="text" size="35" />
+            </div>
+            <div class="field">
+              <label>Cantidad:</label>
+              <input id="cantidad" type="number"/>
+            </div>
+            <div class="field">
+              <label>Precio:</label>
+              <input id="precio" type="number" />
+            </div>
+            <div class="field">
+              <input class="button" id="btnRegistrar" type="button" value="Registrar" />
+              <input class="button" id="btnReemplazar" type="button" value="Cambiar" />
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="right">
+        <h2>Inventario</h2>
+        <div class="content-info">
+          <table id="registry">
+            <tr>
+              <th>Codigo de producto</th>
+              <td><input id="idNav" type="number" /></td>
+              <td id="btns"></td>
+            </tr>
+            <tr>
+            <tr>
+              <th>Listar</th>
+              <td id="btnListar"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="divData">
+      <div class="left">
+        <input class="button" type="button" id="borrarAcciones" value="Borrar Acciones">
+        <table id="tablaAcciones">
+          <tr><th>Acciones</th></tr>
+        </table>
+      </div>
+    </div>
+    <div class="right">
+      <table id="lista">
+        <tr>
+          <th id="product">Producto</th>
+          <th id="id">ID</th>
+          <th id="amount">Cantidad</th>
+          <th id="price">Precio</th>
+          <th id="precioTotal">Precio Total</th>
+        </tr>
+      </table>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="inventario.js" type="module"></script>
+  </body>
+</html>
